@@ -9,7 +9,8 @@
   {
     "clean": [
       "~/test/",
-      "~/test/.config"
+      "~/test/.config",
+      "~/test/.fonts"
     ]
   },
   {
@@ -24,6 +25,7 @@
       "~/test/.php_cs.global": "php_cs.global",
       "~/test/.gitconfig": "git/gitconfig",
       "~/test/.gitignore_global": "git/gitignore_global",
+      "~/test/.fonts/NerdFonts": "fonts/NerdFonts",
       "~/test/.config/fish": "config/fish",
       "~/test/.config/omf": "config/omf",
       "~/test/.config/nvim": "config/nvim"
@@ -33,6 +35,10 @@
     "shell": [{
         "command": "git submodule update --init --recursive",
         "description": "Installing/updating submodules"
+      },
+      {
+        "command": "fc-cache -f -v",
+        "description": "Rebuild fonts cache"
       },
       {
         "command": "./config/nvim/install",
