@@ -1,0 +1,23 @@
+{
+  "defaults": {
+    "link": {
+      "create": true,
+      "relink": true
+    }
+  },
+  "clean": {
+    "~/test/": "",
+    "~/test/.config": {
+      "recursive": true
+    }
+  },
+  "link": {
+    "~/test/.bashrc": "bashrc",
+    "~/test/.php_cs.global": "php_cs.global",
+    "~/test/.gitconfig": "git/gitconfig",
+    "~/test/.gitignore_global": "git/gitignore_global",
+    "~/test/.config/fish": "config/fish",
+    "~/test/.config/omf": "config/omf",
+    "~/test/.config/nvim": "config/nvim"
+  }
+}
