@@ -8,8 +8,8 @@
   },
   {
     "clean": [
-      "~/test/",
-      "~/test/.config"
+      "~",
+      "~/.config"
     ]
   },
   {
@@ -20,13 +20,13 @@
   },
   {
     "link": {
-      "~/test/.bashrc": "bashrc",
-      "~/test/.php_cs.global": "php_cs.global",
-      "~/test/.gitconfig": "git/gitconfig",
-      "~/test/.gitignore_global": "git/gitignore_global",
-      "~/test/.config/fish": "config/fish",
-      "~/test/.config/omf": "config/omf",
-      "~/test/.config/nvim": "config/nvim"
+      "~/.bashrc": "bashrc",
+      "~/.php_cs.global": "php_cs.global",
+      "~/.gitconfig": "git/gitconfig",
+      "~/.gitignore_global": "git/gitignore_global",
+      "~/.config/fish": "config/fish",
+      "~/.config/omf": "config/omf",
+      "~/.config/nvim": "config/nvim"
     }
   },
   {
