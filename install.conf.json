@@ -1,23 +1,46 @@
-{
-  "defaults": {
+[{
+    "defaults": {
+      "link": {
+        "create": true,
+        "relink": true
+      }
+    }
+  },
+  {
+    "clean": [
+      "~/test/",
+      "~/test/.config"
+    ]
+  },
+  {
+    "shell": [{
+      "command": "mkdir -p ~/test/ ~/test/.config ",
+      "description": "Creating dirs."
+    }]
+  },
+  {
     "link": {
-      "create": true,
-      "relink": true
+      "~/test/.bashrc": "bashrc",
+      "~/test/.php_cs.global": "php_cs.global",
+      "~/test/.gitconfig": "git/gitconfig",
+      "~/test/.gitignore_global": "git/gitignore_global",
+      "~/test/.config/fish": "config/fish",
+      "~/test/.config/omf": "config/omf",
+      "~/test/.config/nvim": "config/nvim"
     }
   },
-  "clean": {
-    "~/test/": "",
-    "~/test/.config": {
-      "recursive": true
-    }
-  },
-  "link": {
-    "~/test/.bashrc": "bashrc",
-    "~/test/.php_cs.global": "php_cs.global",
-    "~/test/.gitconfig": "git/gitconfig",
-    "~/test/.gitignore_global": "git/gitignore_global",
-    "~/test/.config/fish": "config/fish",
-    "~/test/.config/omf": "config/omf",
-    "~/test/.config/nvim": "config/nvim"
+  {
+    "shell": [{
+        "command": "git submodule update --init --recursive",
+        "description": "Installing/updating submodules"
+      },
+      {
+        "command": "./config/nvim/install",
+        "description": "Installing/updating Nvim plugins",
+        "stdout": true,
+        "stdin": true,
+        "stderr": true
+      }
+    ]
   }
-}
+]
