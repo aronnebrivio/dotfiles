@@ -10,3 +10,6 @@ local.fish
 # fish generated files
 fishd*
 fish_variables
+
+# fisher
+functions/fisher.fish
