@@ -2,7 +2,8 @@
     "defaults": {
       "link": {
         "create": true,
-        "relink": true
+        "relink": true,
+        "force": true
       }
     }
   },
@@ -11,12 +12,6 @@
       "~",
       "~/.config"
     ]
-  },
-  {
-    "shell": [{
-      "command": "mkdir -p ~/test/ ~/test/.config ",
-      "description": "Creating dirs."
-    }]
   },
   {
     "link": {
