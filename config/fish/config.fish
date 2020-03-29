@@ -54,8 +54,13 @@ set -g theme_nerd_fonts yes
 # Colorls
 # source (dirname (gem which colorls))/tab_complete.sh
 
-# Bobthefish config
-set -g theme_display_git_master_branch yes
+
+#
+### THEME CONFIG
+#
+if [ -f $HOME/.config/fish/theme.fish ]
+    source $HOME/.config/fish/theme.fish
+end
 
 
 #
