@@ -17,7 +17,9 @@ set -x SUDO_EDITOR $EDITOR
 # set -gx PATH ~/.npm-global/bin $PATH
 
 # rbenv
-set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
+if not contains -- "$HOME/.rbenv/bin" $PATH
+    set -gx PATH $HOME/.rbenv/bin $PATH
+end
 
 
 #
@@ -26,6 +28,7 @@ set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
 if [ -f $HOME/.config/fish/env/index.fish ]
     source $HOME/.config/fish/env/index.fish
 end
+
 
 #
 ### ALIASES
@@ -84,3 +87,6 @@ end
 if [ -f $HOME/.config/fish/local.fish ]
     source $HOME/.config/fish/local.fish
 end
+
+# Deduplicate PATH entries
+dedup_paths
