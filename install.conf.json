@@ -23,7 +23,8 @@
       "~/.config/fish": "config/fish",
       "~/.config/omf": "config/omf",
       "~/.config/nvim": "config/nvim",
-      "~/.config/base16-shell": "config/base16-shell"
+      "~/.config/base16-shell": "config/base16-shell",
+      "~/.config/bat": "config/bat"
     }
   },
   {
