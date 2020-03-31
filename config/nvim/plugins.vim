@@ -36,7 +36,6 @@ Plug 'https://github.com/tommcdo/vim-exchange'
 Plug 'https://github.com/zeekay/vimtips.git'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tek/vim-fieldtrip'
 Plug 'https://github.com/mhinz/vim-startify'
 
 

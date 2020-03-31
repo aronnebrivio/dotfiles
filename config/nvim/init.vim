@@ -428,15 +428,6 @@ set wildignore+=*.jpg,*.jpeg,*.png,*.gif,*.zip,*.xc*,*.pbxproj,*.xcodeproj/**,*.
 set wildignore+=*.js.map,ui/public/client/*,cassettes/**,node_modules/**
 " }}}
 
-" Fieldtrip and Sideways {{{
-" Note: Sideways allows for switching of arguments.
-"       Fieldtrip provides a submode for doing so.
-" Defaults: `l` and `h' quickly move between args
-"           `L` and `H` moves the arguments position right and left.
-" [g]oto [a]rguments
-let g:fieldtrip_start_map='ga'
-" }}}
-
 " Re-indent last change and move cursor to end of change
 nnoremap =. :normal! =````<CR>
 " }}}
