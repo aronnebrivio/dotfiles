@@ -2,6 +2,6 @@ function cat --wraps bat
     if type -q bat
         bat $argv
     else
-        cat $argv
+        /bin/cat $argv
     end
 end
