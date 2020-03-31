@@ -71,7 +71,6 @@ set -g theme_nerd_fonts yes
 if status --is-interactive
     set BASE16_SHELL "$HOME/.config/base16-shell/"
     source "$BASE16_SHELL/profile_helper.fish"
-    source $HOME/.config/base16-shell/profile_helper.fish
 end
 
 # Theme config
