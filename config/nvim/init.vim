@@ -1,4 +1,3 @@
-source ~/.config/nvim/after/plugin/multiple_cursors.vim
 source ~/.config/nvim/after/plugin/linter_fixer.vim
 source ~/.config/nvim/plugins.vim
 
