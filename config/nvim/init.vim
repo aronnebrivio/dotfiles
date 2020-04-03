@@ -140,44 +140,6 @@ command! QQ qa! " quit I mean it!
 " <C-@> is same as <S-Space>
 inoremap <C-@> <C-n>
 
-" Toggle Movements {{{
-" Helper function to use an alternate movement if the first
-" movement doesn't move the cursor.
-function! ToggleMovement(firstOp, thenOp)
-  let pos = getpos('.')
-  let c = v:count > 0 ? v:count : ''
-  execute "normal! " . c . a:firstOp
-  if pos == getpos('.')
-    execute "normal! " . c . a:thenOp
-  endif
-endfunction
-
-" Warning: 0 uses ^ first, then 0
-nnoremap <silent> 0 :call ToggleMovement('^', '0')<CR>
-nnoremap <silent> ^ :call ToggleMovement('0', '^')<CR>
-nnoremap <silent> $ :call ToggleMovement('$', '^')<CR>
-" }}}
-
-" Warning: I'm killing the 2nd <C-r> in these modes because '"' is too hard to
-" reach. This makes <C-r> more consistent with Register access in insert and
-" command mode.
-nnoremap <C-r><C-r> ""
-cnoremap <C-r><C-r> <C-r>"
-vnoremap <C-r><C-r> ""
-cnoremap <C-k> <up>
-cnoremap <C-j> <down>
-
-" Warning: This pastes the last thing yanked! Awesome sauce!
-inoremap <C-r><C-r> <C-r>"
-" Warning: provide reverse mapping for original <C-r><C-r> behavior at the
-" expense of accessing the 'r' register. Poor 'r' register no one loves you.
-inoremap <C-r>r <C-r><C-r>
-
-" Warning: Make capital U perform a Redo
-" Because of the <C-r> hacks above, I break <S-u> and make it redo. The default
-" because of <S-u> is undo the whole line. Sorry if you used it.
-nnoremap <S-u> <C-r>
-
 " Warning: Scroll 1 line at a time instead of default 3
 noremap <ScrollWheelUp> <C-Y>
 noremap <ScrollWheelDown> <C-E>
@@ -228,16 +190,6 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap - :NERDTreeFind<CR>
 " }}}
 
-" Tagbar {{{
-nnoremap <Leader>tb :Tagbar<CR>
-nnoremap <Leader>ta :TagbarOpenAutoClose<CR>
-" }}}
-
-" Neoterm mappings {{{
-" nnoremap <Leader>tt :Topen<CR>
-" nnoremap <Leader>tr :TREPLSend<CR>
-" }}}
-
 " Easy Command Mode
 nnoremap <Leader>; :
 " `<CR>` in normal buffer sends `:`
@@ -247,11 +199,6 @@ nnoremap <Leader>; :
 
 " Turn on paste mode, paste, turn off paste mode.
 nnoremap <silent> <f5> :set paste <bar> exec('norm! p') <bar> set nopaste<cr>
-
-" Better use :tjump instead of :tag
-" Warning: swapping <C-]> and g<C-]>
-nnoremap <C-]> g<C-]>
-nnoremap g<C-]> <C-]>
 
 " [c]lear [w]hitespace
 function! ClearWhitespace()
@@ -268,20 +215,6 @@ nnoremap <Leader>cw :call ClearWhitespace()<CR>
 " Copy current buffer path to system clipboard
 " I picked 5 because it's also the '%' key.
 nnoremap <silent> <Leader>5 :let @* = expand("%:p")<CR>:echom "copied: " . expand("%:p")<CR>
-
-" Visual Selection Helpers {{{
-" reselect last change
-nnoremap <Leader>vv mv`[V`]`v
-
-" Ctrl Left and Right (h, l) starts visual selection
-" then continues it simlar to Shift-Option-Left/Right
-nmap <S-A-l> ve
-vmap <S-A-l> e
-nmap <S-A-h> vb
-vmap <S-A-h> b
-nmap <A-l> e
-nmap <A-h> b
-" }}}
 
 " Move through wrapped lines as default, with reverse mappings
 " Warning: swapping k with gk and j with gj
@@ -303,119 +236,10 @@ nnoremap { {zz
 nnoremap zj zjzz
 nnoremap zk zkzz
 
-" Warning: Disable annoying key defaults
-nnoremap <F1> <nop>
-nnoremap Q <nop>
-nnoremap K <nop>
-command! Qa qa
-command! QA qa!
-command! -bang QA qa!
-
 " Faster :ex commands
 nnoremap <C-s> :write<CR>
 inoremap <C-s> <ESC>:write<CR>
 nnoremap <C-q> :close<CR>
-
-" Buffer Stuff
-" Warning: C-n/C-p to move to next/previous buffer. Instead of down/up lines.
-nnoremap <silent> <C-p> :bprevious<CR>
-nnoremap <silent> <C-n> :bnext<CR>
-" Jump out until buffer changes {{{
-function! s:jump_till_next_buffer() abort
-  let current_nr = bufnr('%')
-  let max = 100
-  while bufnr('%') == current_nr
-    exec "normal \<C-o>"
-    if max == 0
-      echo 'max jumps reached!'
-      break
-    endif
-    let max -= 1
-  endwhile
-endfunction
-" [x]-out the current buffer and jump out.
-" nnoremap <silent> <C-x> <C-o>:bdelete! #<CR>
-nnoremap <silent> <C-x> :call <SID>jump_till_next_buffer() <BAR>silent! bd#<CR>
-" }}}
-
-" Populate QuickFix with branch changes
-command! QfBranch cgetexpr system("git diff --name-only  `git log --graph --oneline -99 \| grep -A 1 -E '^\\* [0-9a-f]{7}' \| cut -c 5-11 \| tail -1`.. \| sed -E 's/(.*)/\\1:0:0 \\1/'") | copen
-
-" WIP - sed doesn't work in script, but does in terminal :/
-" command! QfStat cexpr! system("git diff --stat=999 --name-only"
-" \ . " `git log --graph --oneline -99 \| grep -A 1 -E '^\\* [0-9a-f]{7}' \| cut -c 5-11 \| tail -1`.. \|"
-" \ . " sed -E 's~ ([^ \|]+)([ \|])+(.+)~\\1:0:0 Cats~'"
-" \) | copen
-
-nnoremap <silent> <Leader>bb :b#<CR>
-
-" [b]uffer [o]nly - close all except my buffer
-" Thanks: http://stackoverflow.com/a/34050776
-nnoremap <silent> <Leader>bo :update<cr>:%bd<cr>:e#<CR>
-
-" Not a FZF but I like the 'f' prefix :/
-map <Leader>fw [I:let nr = input("Which tag?: ")<Bar>exe "normal " . nr ."[\t"<CR>
-
-" Warning: Yank without moving cursor! Awesome Sauce!
-"          exit visual mode, my=mark y, last visual selection, y, go to mark
-" Thanks: http://ddrscott.github.io/blog/2016/yank-without-jank/#comment-2643800118
-vnoremap <expr>y 'my"'.v:register.'y`y'
-vnoremap <expr>Y 'my"'.v:register.'Y`y'
-
-" Warning: Marks last yank position.
-nnoremap <expr>y 'my'.v:count.'"'.v:register.'y'
-nnoremap <expr>Y 'my"'.v:register.'y$'
-
-" Warning: Paste moves to end of change. As if you typed in the change.
-" This paste also maintains indent level with line above it.
-nnoremap <expr>p ''.v:count.'"'.v:register.']p`]mp'
-nnoremap <expr>P ''.v:count.'"'.v:register.']P`]mp'
-
-" Visual Paste Override {{{
-" Warning: overrides `p` and `P` behavior by preserving the "" register and
-"          moving cursor to end of paste location
-" See `:h setreg()` for a reference of how to use get/setreg.
-function! VisualPaste()
-  let s:saved_unnamed = getreg(v:register,1)
-  let s:saved_type = getregtype(v:register)
-  return "p`]mp=`[`p:call RestorePaste()\<cr>"
-endfunction
-function! RestorePaste()
-  call setreg(v:register, s:saved_unnamed, s:saved_type)
-endfunction
-vnoremap <silent> <expr> p VisualPaste()
-
-" Messes up too many other plugins :(
-" nnoremap c mcc
-" vnoremap c <ESC>mcgvc
-" vnoremap C <ESC>mcgvC
-
-" Grep Stuff
-" Warning: sets @/ register to current word
-nnoremap <silent> <Leader>gw :let @/=expand("<cword>")<CR>:execute "grep! " . shellescape(expand("<cword>"))<CR>:cwindow<CR>
-" }}}
-
-" Quick Editing {{{
-command! Notes Files ~/notes
-" Hit [v]im[r]c at the same time to open vimrc.
-nnoremap <silent> <Leader>vr :edit $MYVIMRC<CR>
-nnoremap <silent> <Leader>ve :edit $MYVIMRC<CR>
-nnoremap <silent> <Leader>vs :w <bar> source $MYVIMRC<CR>
-" }}}
-
-" Emacs Editing {{{
-cnoremap <C-e> <End>
-cnoremap <C-a> <Home>
-inoremap <C-a> <C-o>^
-inoremap <C-e> <End>
-nnoremap <a-bs> a<C-w>
-inoremap <a-bs> <C-w>
-" Ctrl-C to quit insert mode with AfterInsert callbacks
-inoremap <C-c> <ESC>
-" No need for normal mode mappings.
-" use <S-i> to insert begining
-" use <S-a> to append at end
-" }}}
 
 " Wildmenu completion {{{
 set wildmenu
@@ -428,46 +252,7 @@ set wildignore+=*.jpg,*.jpeg,*.png,*.gif,*.zip,*.xc*,*.pbxproj,*.xcodeproj/**,*.
 set wildignore+=*.js.map,ui/public/client/*,cassettes/**,node_modules/**
 " }}}
 
-" Re-indent last change and move cursor to end of change
-nnoremap =. :normal! =````<CR>
-" }}}
-
-
-" Sneak Plugin Settings {{{
-" Help: :help sneak-defaults
-" Warning: Overrides `s` and `S`.
-"
-"    Key Sequence             | Description
-"    -------------------------|----------------------------------------------
-"    s{char}{char}            | Go to the next occurrence of {char}{char}
-"    S{char}{char}            | Go to the previous occurrence of {char}{char}
-let g:sneak#s_next = 1
-" }}}
-
 " Startify {{{
 let g:startify_change_to_dir=0
 let g:startify_change_to_vcs_root=1
-" }}}
-
-" Simple commands to open external tools {{{
-command! -nargs=* Stree call system('stree ' . <q-args>)
-command! -nargs=* Open call system('open ' . <q-args>)
-" }}}
-
-" command! Duplicate execute('normal :saveas '.expand('%'))
-cnoremap <C-e> <C-R>=expand('%')<CR>
-
-" Open current file and line in Stash browser.
-" Fugitives :Gbrowse doesn't support stash, so this is our ugly hack. {{{
-command! StashOpen
-  \ let _file=substitute(expand('%'), system('git rev-parse --show-toplevel'), '', '') <bar>
-  \ let _branch=substitute(system('git rev-parse --abbrev-ref HEAD'), '\n', '', '') <bar>
-  \ let _cmd='open "https://stash.centro.net/projects/CEN/repos/centro-media-manager/browse/' . _file . '?at=refs/heads/' . _branch . '#' . line('.') . '"'<bar>
-  \ echo _cmd . system(_cmd)
-
-" Identify syntax group at current cursor position {{{
-" Thanks: http://vim.wikia.com/wiki/Identify_the_syntax_highlighting_group_used_at_the_cursor
-map <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 " }}}
