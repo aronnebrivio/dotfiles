@@ -10,6 +10,14 @@
 	sweep = !git branch --merged $(git rev-parse origin/develop) | grep -e \"^\\s\\+\\(bugfix\\|fix\\|feature\\)/\" | xargs git branch -d
 	sweep-check = !git branch --merged $(git rev-parse origin/develop) | grep -e \"^\\s\\+\\(bugfix\\|fix\\|feature\\)/\"
 	subupdate = !git submodule foreach git pull origin master
+	update-submodules = submodule update --init --recursive
+	upgrade-submodules = submodule update --init --remote
+	noff = merge --no-ff
+	f = fetch --tags --prune
+	fa = fetch --all --tags --prune
+
+[grep]
+	lineNumber = true
 
 # Allow local customizations in the .gitconfig_local file
 [include]
