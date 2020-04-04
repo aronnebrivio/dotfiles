@@ -15,6 +15,7 @@
 	noff = merge --no-ff
 	f = fetch --tags --prune
 	fa = fetch --all --tags --prune
+	lg = log --graph --date=short --oneline --decorate=full
 
 [grep]
 	lineNumber = true
