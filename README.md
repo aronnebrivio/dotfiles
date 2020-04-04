@@ -31,5 +31,7 @@ This project supports **computer specific customizations** for some programs:
   - `config/fish/local.fish` for other local configurations
 - git: `~/.gitconfig_local` for local configurations and aliases
 
+For my personal local configurations head to [dotfiles-local](https://github.com/aronnebrivio/dotfiles-local).
+
 ## License
 Copyright (c) 2020 Aronne Brivio. Released under the MIT License. See [LICENSE.md](https://github.com/aronnebrivio/dotfiles/blob/master/LICENSE.md) for details.
