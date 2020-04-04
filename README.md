@@ -17,10 +17,19 @@ This repository includes configuration files for:
   - some fancy aliases
 - [iTerm](https://www.iterm2.com/) (MacOS only)
 
-After cloning this repo, run `./install` to automatically set up the development environment.
+Once cloned, run `./install` to automatically set up the development environment.
 *Note that the install script is idempotent: it can safely be run multiple times.*
 
 Dotfiles uses [Dotbot](https://github.com/anishathalye/dotbot) for installation.
+
+## Local Customizations
+This project supports **computer specific customizations** for some programs:
+
+- fish shell:
+  - `config/fish/aliases/local.fish` for local aliases
+  - `config/fish/env/local.fish` for local environment
+  - `config/fish/local.fish` for other local configurations
+- git: `~/.gitconfig_local` for local configurations and aliases
 
 ## License
 Copyright (c) 2020 Aronne Brivio. Released under the MIT License. See [LICENSE.md](https://github.com/aronnebrivio/dotfiles/blob/master/LICENSE.md) for details.
