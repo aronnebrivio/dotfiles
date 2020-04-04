@@ -21,3 +21,6 @@ After cloning this repo, run `./install` to automatically set up the development
 *Note that the install script is idempotent: it can safely be run multiple times.*
 
 Dotfiles uses [Dotbot](https://github.com/anishathalye/dotbot) for installation.
+
+## License
+Copyright (c) 2020 Aronne Brivio. Released under the MIT License. See [LICENSE.md](https://github.com/aronnebrivio/dotfiles/blob/master/LICENSE.md) for details.
