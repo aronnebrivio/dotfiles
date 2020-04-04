@@ -15,7 +15,6 @@ This repository includes configuration files for:
 - [git](https://git-scm.com/)
   - global `.gitignore` and config
   - some fancy aliases
-- [iTerm](https://www.iterm2.com/) (MacOS only)
 
 Once cloned, run `./install` to automatically set up the development environment.
 *Note that the install script is idempotent: it can safely be run multiple times.*

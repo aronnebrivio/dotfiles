@@ -25,8 +25,7 @@
       "~/.config/omf": "config/omf",
       "~/.config/nvim": "config/nvim",
       "~/.config/base16-shell": "config/base16-shell",
-      "~/.config/bat": "config/bat",
-      "~/.config/iterm2": "config/iterm2"
+      "~/.config/bat": "config/bat"
     }
   },
   {
