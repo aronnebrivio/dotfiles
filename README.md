@@ -9,9 +9,13 @@ This repository includes configuration files for:
   - [bobthefish](https://github.com/oh-my-fish/theme-bobthefish) theme
   - [base16](https://github.com/chriskempson/base16-shell) colors support
   - [bat](https://github.com/sharkdp/bat)
+  - [colorls](https://github.com/athityakumar/colorls) support
+  - [node](https://nodejs.org/) via [fish-nvm](https://github.com/jorgebucaran/fish-nvm)
 - [Neovim](https://neovim.io/)
   - tons of plugins (w/ [vim-plug](https://github.com/junegunn/vim-plug))
   - some key remaps
+- [Vim]()
+  - use Nvim configuration (thanks to [laggardkernel](https://gist.github.com/laggardkernel/9013f948345212563ede9c9ee56c6b42))
 - [git](https://git-scm.com/)
   - global `.gitignore` and config
   - some fancy aliases
