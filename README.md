@@ -14,7 +14,7 @@ This repository includes configuration files for:
 - [Neovim](https://neovim.io/)
   - tons of plugins (w/ [vim-plug](https://github.com/junegunn/vim-plug))
   - some key remaps
-- [Vim]()
+- [Vim](https://www.vim.org/)
   - use Nvim configuration (thanks to [laggardkernel](https://gist.github.com/laggardkernel/9013f948345212563ede9c9ee56c6b42))
 - [git](https://git-scm.com/)
   - global `.gitignore` and config
