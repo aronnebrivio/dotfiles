@@ -1,3 +1,7 @@
+if has('nvim') == 0
+  finish
+endif
+
 if !exists(':term')
   finish
 endif

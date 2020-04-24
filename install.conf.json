@@ -24,7 +24,8 @@
       "~/.config/fish": "config/fish",
       "~/.config/omf": "config/omf",
       "~/.config/nvim": "config/nvim",
-      "~/.vimrc": "config/nvim/init.vim",
+      "~/.vim": "config/nvim",
+      "~/.config/nvim/vimrc": "config/nvim/init.vim",
       "~/.config/base16-shell": "config/base16-shell",
       "~/.config/bat": "config/bat"
     }
@@ -33,10 +34,6 @@
     "shell": [{
         "command": "git submodule update --init --recursive",
         "description": "Installing/updating submodules"
-      },
-      {
-        "command": "mkdir -p ~/.local/share/nvim/site && ln -s ~/.local/share/nvim/site ~/.vim",
-        "description": "Making Nvim configuration working for Vim too"
       },
       {
         "command": "./config/nvim/install",

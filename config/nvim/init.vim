@@ -255,3 +255,16 @@ set wildignore+=*.js.map,ui/public/client/*,cassettes/**,node_modules/**
 let g:startify_change_to_dir=0
 let g:startify_change_to_vcs_root=1
 " }}}
+
+" Nvim configurations in Vim
+let g:is_nvim = has('nvim')
+let g:is_vim8 = v:version >= 800 ? 1 : 0
+
+" Reuse nvim's runtimepath and packpath in vim
+if !g:is_nvim && g:is_vim8
+  set runtimepath-=~/.vim
+    \ runtimepath^=~/.local/share/nvim/site runtimepath^=~/.vim
+    \ runtimepath-=~/.vim/after
+    \ runtimepath+=~/.local/share/nvim/site/after runtimepath+=~/.vim/after
+  let &packpath = &runtimepath
+endif
