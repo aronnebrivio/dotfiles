@@ -261,6 +261,7 @@ let g:is_nvim = has('nvim')
 let g:is_vim8 = v:version >= 800 ? 1 : 0
 
 " Reuse nvim's runtimepath and packpath in vim
+" https://gist.github.com/laggardkernel/9013f948345212563ede9c9ee56c6b42
 if !g:is_nvim && g:is_vim8
   set runtimepath-=~/.vim
     \ runtimepath^=~/.local/share/nvim/site runtimepath^=~/.vim
