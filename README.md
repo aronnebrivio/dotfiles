@@ -36,5 +36,17 @@ This project supports **computer specific customizations** for some programs:
 
 For my personal local configurations head to [dotfiles-local](https://github.com/aronnebrivio/dotfiles-local).
 
+## Result
+![Shell example](shell.png)
+![Vim example](vim.png)
+
+## ToDo
+- [x] Fish configuration
+- [x] Nvim configuration
+- [x] Git configuration
+- [x] Support local customizations
+- [ ] Use Nvim configuration in Vim
+- [ ] SSH configuration
+
 ## License
 Copyright (c) 2020 Aronne Brivio. Released under the MIT License. See [LICENSE.md](https://github.com/aronnebrivio/dotfiles/blob/master/LICENSE.md) for details.
