@@ -16,6 +16,7 @@
 	f = fetch --tags --prune
 	fa = fetch --all --tags --prune
 	lg = log --graph --date=short --oneline --decorate=full
+	ghp-publish = !git checkout develop && git push --tags && git push && git checkout production && git push && git checkout develop
 
 [grep]
 	lineNumber = true
