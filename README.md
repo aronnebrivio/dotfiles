@@ -1,6 +1,8 @@
 # ⚙️ Dotfiles
 > It seems that after years without *git-ing* my dotfiles, I finally made up my mind! 🎉
-
+   
+[![Build Status](https://travis-ci.com/aronnebrivio/dotfiles.svg?branch=master)](https://travis-ci.com/aronnebrivio/dotfiles)   
+   
 This repository includes configuration files for:
 
 - [fish shell](https://fishshell.com/) (w/ aliases and functions)
