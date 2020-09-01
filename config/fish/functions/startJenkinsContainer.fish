@@ -4,6 +4,9 @@ function startJenkinsContainer -a port -d "Start Jenkins in a Docker container e
         exit 1
     end
 
+    # Remove old container
+    docker rm --force jenkins
+
     # Ensures it always uses the latest version
     docker pull jenkinsci/blueocean
 
