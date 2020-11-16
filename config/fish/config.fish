@@ -61,8 +61,15 @@ end
 # Enable terminal Nerd Fonts
 set -g theme_nerd_fonts yes
 
+# rbenv
+if type -q rbenv
+    status --is-interactive; and source (rbenv init -|psub)
+end
+
 # Colorls
-# source (dirname (gem which colorls))/tab_complete.sh
+# if type -q colorls
+#     source (dirname (gem which colorls))/tab_complete.sh
+# end
 
 #
 ### THEME
