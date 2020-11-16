@@ -9,8 +9,9 @@ This repository includes configuration files for:
   - [bobthefish](https://github.com/oh-my-fish/theme-bobthefish) theme
   - [base16](https://github.com/chriskempson/base16-shell) colors support
   - [bat](https://github.com/sharkdp/bat)
-  - [colorls](https://github.com/athityakumar/colorls) support
+  - Different `ls` "services" supports (currently [colorls](https://github.com/athityakumar/colorls) and [exa](https://github.com/ogham/exa)) <sup>[[1]](#notes)</sup>
   - [node](https://nodejs.org/) via [fish-nvm](https://github.com/jorgebucaran/fish-nvm)
+  - [rbenv](https://github.com/rbenv/rbenv) support
 - [Neovim](https://neovim.io/)
   - tons of plugins (w/ [vim-plug](https://github.com/junegunn/vim-plug))
   - some key remaps
@@ -47,6 +48,9 @@ For my personal local configurations head to [dotfiles-local](https://github.com
 - [x] Support local customizations
 - [x] Use Nvim configuration in Vim
 - [ ] SSH configuration
+
+## Notes
+**[1]:** I currently use a global variable named `$LS_SERVICE`: changing it's value from *exa* to *colorls* will switch "ls service".
 
 ## License
 Copyright (c) 2020 Aronne Brivio. Released under the MIT License. See [LICENSE](https://github.com/aronnebrivio/dotfiles/blob/master/LICENSE) for details.
