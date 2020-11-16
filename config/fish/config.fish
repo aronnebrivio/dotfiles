@@ -6,6 +6,8 @@ set -x EDITOR vim
 set -x GIT_EDITOR $EDITOR
 set -x SUDO_EDITOR $EDITOR
 
+# ls service (currently supports colorls/exa)
+set -x LS_SERVICE exa
 
 #
 ### PATHS
@@ -60,11 +62,6 @@ end
 
 # Enable terminal Nerd Fonts
 set -g theme_nerd_fonts yes
-
-# rbenv
-if type -q rbenv
-    status --is-interactive; and source (rbenv init -|psub)
-end
 
 # Colorls
 # if type -q colorls
