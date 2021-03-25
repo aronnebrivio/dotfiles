@@ -9,15 +9,10 @@ set -x SUDO_EDITOR $EDITOR
 # ls service (currently supports colorls/exa)
 set -x LS_SERVICE exa
 
+
 #
 ### PATHS
 #
-# Composer
-# set -gx PATH ~/.config/composer/vendor/bin $PATH
-
-# Npm
-# set -gx PATH ~/.npm-global/bin $PATH
-
 # rbenv
 if not contains -- "$HOME/.rbenv/bin" $PATH
     set -gx PATH $HOME/.rbenv/bin $PATH
@@ -72,16 +67,18 @@ set -g theme_nerd_fonts yes
 ### THEME
 #
 # Base16 Shell
-if status --is-interactive
-    set BASE16_SHELL "$HOME/.config/base16-shell/"
-    source "$BASE16_SHELL/profile_helper.fish"
-end
+# if status --is-interactive
+#     set BASE16_SHELL "$HOME/.config/base16-shell/"
+#     source "$BASE16_SHELL/profile_helper.fish"
+# end
 
 # Theme config
-if [ -f $HOME/.config/fish/theme.fish ]
-    source $HOME/.config/fish/theme.fish
-end
+# if [ -f $HOME/.config/fish/theme.fish ]
+#     source $HOME/.config/fish/theme.fish
+# end
 
+# starship theme
+starship init fish | source
 
 #
 ### LOCAL CONFIGS OVERRIDE
