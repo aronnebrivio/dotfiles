@@ -47,7 +47,10 @@ For my personal local configurations head to [dotfiles-local](https://github.com
 - [x] Git configuration
 - [x] Support local customizations
 - [x] Use Nvim configuration in Vim
+- [x] Python virtualenv support
 - [ ] SSH configuration
+- [ ] Install system dependencies (packages, shell, etc.)
+- [ ] Improve shell load performances
 
 ## Notes
 **[1]:** I currently use a global variable named `$LS_SERVICE`: changing it's value from *exa* to *colorls* will switch "ls service".

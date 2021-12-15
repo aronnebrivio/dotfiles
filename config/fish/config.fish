@@ -12,12 +12,6 @@ set -x LS_SERVICE exa
 #
 ### PATHS
 #
-# Composer
-# set -gx PATH ~/.config/composer/vendor/bin $PATH
-
-# Npm
-# set -gx PATH ~/.npm-global/bin $PATH
-
 # rbenv
 if not contains -- "$HOME/.rbenv/bin" $PATH
     set -gx PATH $HOME/.rbenv/bin $PATH
@@ -63,10 +57,8 @@ end
 # Enable terminal Nerd Fonts
 set -g theme_nerd_fonts yes
 
-# Colorls
-# if type -q colorls
-#     source (dirname (gem which colorls))/tab_complete.sh
-# end
+# Auto venv support
+__auto_source_venv
 
 #
 ### THEME
