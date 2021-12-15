@@ -47,6 +47,7 @@ For my personal local configurations head to [dotfiles-local](https://github.com
 - [x] Git configuration
 - [x] Support local customizations
 - [x] Use Nvim configuration in Vim
+- [ ] Python virtualenv support
 - [ ] SSH configuration
 
 ## Notes
