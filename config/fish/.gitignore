@@ -13,3 +13,10 @@ fish_variables
 
 # fisher
 functions/fisher.fish
+completions/fisher.fish
+
+# nvm
+functions/_nvm*
+functions/nvm.fish
+conf.d/nvm.fish
+completions/nvm.fish
