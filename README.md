@@ -4,14 +4,13 @@
 This repository includes configuration files for:
 
 - [fish shell](https://fishshell.com/) (w/ aliases and functions)
-  - [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
   - [fisher](https://github.com/jorgebucaran/fisher)
-  - [bobthefish](https://github.com/oh-my-fish/theme-bobthefish) theme
   - [base16](https://github.com/chriskempson/base16-shell) colors support
   - [bat](https://github.com/sharkdp/bat)
   - Different `ls` "services" supports (currently [colorls](https://github.com/athityakumar/colorls) and [exa](https://github.com/ogham/exa)) <sup>[[1]](#notes)</sup>
   - [node](https://nodejs.org/) via [fish-nvm](https://github.com/jorgebucaran/fish-nvm)
   - [rbenv](https://github.com/rbenv/rbenv) support
+- [Oh My Posh](https://ohmyposh.dev/) configuration
 - [Neovim](https://neovim.io/)
   - tons of plugins (w/ [vim-plug](https://github.com/junegunn/vim-plug))
   - some key remaps

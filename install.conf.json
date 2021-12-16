@@ -1,4 +1,5 @@
-[{
+[
+  {
     "defaults": {
       "link": {
         "create": true,
@@ -27,11 +28,13 @@
       "~/.vim": "config/nvim",
       "~/.config/nvim/vimrc": "config/nvim/init.vim",
       "~/.config/base16-shell": "config/base16-shell",
-      "~/.config/bat": "config/bat"
+      "~/.config/bat": "config/bat",
+      "~/.omp.json": "omp.json"
     }
   },
   {
-    "shell": [{
+    "shell": [
+      {
         "command": "git submodule update --init --recursive",
         "description": "Installing/updating submodules"
       },

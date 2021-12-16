@@ -42,11 +42,6 @@ end
 set -gx LANG en_US.UTF-8
 set -gx LC_ALL en_US.UTF-8
 
-# Oh My Fish
-if [ -f $HOME/.config/fish/omf.fish ]
-    source $HOME/.config/fish/omf.fish
-end
-
 # Fisher
 if status is-interactive && ! functions -q fisher
   curl -sL https://git.io/fisher | source && fisher update
@@ -72,7 +67,6 @@ if [ -f $HOME/.config/fish/theme.fish ]
     source $HOME/.config/fish/theme.fish
 end
 
-
 #
 ### LOCAL CONFIGS OVERRIDE
 #
@@ -83,3 +77,6 @@ end
 
 # Deduplicate PATH entries
 dedup_paths
+
+# Created by `pipx` on 2021-12-16 10:15:00
+set PATH $PATH /Users/aronne.brivio/.local/bin
