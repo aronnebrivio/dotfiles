@@ -41,6 +41,7 @@ end
 # Set locale
 set -gx LANG en_US.UTF-8
 set -gx LC_ALL en_US.UTF-8
+set -gx LC_CTYPE en_US.UTF-8
 
 # Fisher
 if status is-interactive && ! functions -q fisher
