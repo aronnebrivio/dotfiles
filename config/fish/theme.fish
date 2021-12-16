@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
 
+set -x VIRTUAL_ENV_DISABLE_PROMPT 1
+
 #
 ### base16 theme for Vim
 #
