@@ -52,7 +52,7 @@ end
 set -g theme_nerd_fonts yes
 
 # Auto venv support
-__auto_source_venv
+# __auto_source_venv
 
 #
 ### THEME
