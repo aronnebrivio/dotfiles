@@ -16,6 +16,8 @@
   },
   {
     "link": {
+      "~/.bashrc": "bashrc",
+      "~/.profile": "profile",
       "~/.vimrc_background": "vimrc_background",
       "~/.php_cs.global": "php_cs.global",
       "~/.gitconfig": "git/gitconfig",
