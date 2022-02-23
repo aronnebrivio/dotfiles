@@ -4,13 +4,11 @@
 This repository includes configuration files for:
 
 - [fish shell](https://fishshell.com/) (w/ aliases and functions)
-  - [fisher](https://github.com/jorgebucaran/fisher)
+  - [Oh My Posh](https://ohmyposh.dev/) configuration
   - [base16](https://github.com/chriskempson/base16-shell) colors support
   - [bat](https://github.com/sharkdp/bat)
-  - Different `ls` "services" supports (currently [colorls](https://github.com/athityakumar/colorls) and [exa](https://github.com/ogham/exa)) <sup>[[1]](#notes)</sup>
-  - [node](https://nodejs.org/) via [fish-nvm](https://github.com/jorgebucaran/fish-nvm)
-  - [rbenv](https://github.com/rbenv/rbenv) support
-- [Oh My Posh](https://ohmyposh.dev/) configuration
+  - [exa](https://github.com/ogham/exa))
+  - [node](https://nodejs.org/) and [go](https://go.dev/) via [asdf-vm](https://asdf-vm.com)
 - [Neovim](https://neovim.io/)
   - tons of plugins (w/ [vim-plug](https://github.com/junegunn/vim-plug))
   - some key remaps
@@ -46,13 +44,13 @@ For my personal local configurations head to [dotfiles-local](https://github.com
 - [x] Git configuration
 - [x] Support local customizations
 - [x] Use Nvim configuration in Vim
-- [x] Python virtualenv support
+- [ ] Move pyenv from local to global dotfiles <sup>[[1]](#notes)</sup>
 - [ ] SSH configuration
 - [ ] Install system dependencies (packages, shell, etc.)
 - [ ] Improve shell load performances
 
 ## Notes
-**[1]:** I currently use a global variable named `$LS_SERVICE`: changing it's value from *exa* to *colorls* will switch "ls service".
+**[1]:** I prefer using pyenv instead of asdf-vm for managing python versions and virtualenvs mainly because of Oh My Posh support.
 
 ## License
 Copyright (c) 2020 Aronne Brivio. Released under the MIT License. See [LICENSE](https://github.com/aronnebrivio/dotfiles/blob/master/LICENSE) for details.

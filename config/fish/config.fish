@@ -6,15 +6,6 @@ set -x EDITOR vim
 set -x GIT_EDITOR $EDITOR
 set -x SUDO_EDITOR $EDITOR
 
-# ls service (currently supports colorls/exa)
-set -x LS_SERVICE exa
-
-#
-### PATHS
-#
-# rbenv
-fish_add_path $HOME/.rbenv/bin $PATH
-
 #
 ### OTHER
 #
@@ -23,16 +14,8 @@ set -gx LANG en_US.UTF-8
 set -gx LC_ALL en_US.UTF-8
 set -gx LC_CTYPE en_US.UTF-8
 
-# Fisher
-if status is-interactive && ! functions -q fisher
-  curl -sL https://git.io/fisher | source && fisher update
-end
-
 # Enable terminal Nerd Fonts
 set -g theme_nerd_fonts yes
-
-# Auto venv support
-# __auto_source_venv
 
 #
 ### THEME
@@ -70,5 +53,3 @@ end
 if [ -f $HOME/.config/fish/theme.fish ]
     source $HOME/.config/fish/theme.fish
 end
-# Deduplicate PATH entries
-# dedup_paths
