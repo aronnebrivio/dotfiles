@@ -13,27 +13,7 @@ set -x LS_SERVICE exa
 ### PATHS
 #
 # rbenv
-if not contains -- "$HOME/.rbenv/bin" $PATH
-    set -gx PATH $HOME/.rbenv/bin $PATH
-end
-
-
-#
-### ENV
-#
-if [ -f $HOME/.config/fish/env/index.fish ]
-    source $HOME/.config/fish/env/index.fish
-end
-
-
-#
-### ALIASES
-#
-# Main
-if [ -f $HOME/.config/fish/aliases/index.fish ]
-    source $HOME/.config/fish/aliases/index.fish
-end
-
+fish_add_path $HOME/.rbenv/bin $PATH
 
 #
 ### OTHER
@@ -63,11 +43,6 @@ if status --is-interactive
     source "$BASE16_SHELL/profile_helper.fish"
 end
 
-# Theme config
-if [ -f $HOME/.config/fish/theme.fish ]
-    source $HOME/.config/fish/theme.fish
-end
-
 #
 ### LOCAL CONFIGS OVERRIDE
 #
@@ -76,8 +51,24 @@ if [ -f $HOME/.config/fish/local.fish ]
     source $HOME/.config/fish/local.fish
 end
 
-# Deduplicate PATH entries
-dedup_paths
+#
+### ENV
+#
+if [ -f $HOME/.config/fish/env/index.fish ]
+    source $HOME/.config/fish/env/index.fish
+end
 
-# Created by `pipx` on 2021-12-16 10:15:00
-set PATH $PATH /Users/aronne.brivio/.local/bin
+#
+### ALIASES
+#
+# Main
+if [ -f $HOME/.config/fish/aliases/index.fish ]
+    source $HOME/.config/fish/aliases/index.fish
+end
+
+# Theme config
+if [ -f $HOME/.config/fish/theme.fish ]
+    source $HOME/.config/fish/theme.fish
+end
+# Deduplicate PATH entries
+# dedup_paths

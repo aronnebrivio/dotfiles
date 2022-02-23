@@ -43,6 +43,16 @@
           "type": "go"
         },
         {
+          "type": "php",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#ffffff",
+          "background": "#4063D8",
+          "properties": {
+            "template": " \ue73d {{ .Full }} "
+          }
+        },
+        {
           "background": "#FFDE57",
           "foreground": "#111111",
           "powerline_symbol": "\ue0b0",
