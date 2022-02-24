@@ -53,3 +53,6 @@ end
 if [ -f $HOME/.config/fish/theme.fish ]
     source $HOME/.config/fish/theme.fish
 end
+
+# Deduplicate paths
+dedup_paths

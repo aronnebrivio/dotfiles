@@ -161,7 +161,7 @@
           "powerline_symbol": "\ue0b2",
           "properties": {
             "always_enabled": true,
-            "template": " \ufbab {{ .FormattedMs }} "
+            "template": " {{ .FormattedMs }} "
           },
           "style": "powerline",
           "type": "executiontime"
