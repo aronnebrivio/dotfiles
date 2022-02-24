@@ -7,8 +7,9 @@ This repository includes configuration files for:
   - [Oh My Posh](https://ohmyposh.dev/) configuration
   - [base16](https://github.com/chriskempson/base16-shell) colors support
   - [bat](https://github.com/sharkdp/bat)
-  - [exa](https://github.com/ogham/exa))
-  - [node](https://nodejs.org/) and [go](https://go.dev/) via [asdf-vm](https://asdf-vm.com)
+  - [exa](https://github.com/ogham/exa)
+  - [node](https://nodejs.org/), [go](https://go.dev/) and [PHP](https://www.php.net/) via [asdf-vm](https://asdf-vm.com)
+  - [pyenv](https://github.com/pyenv/pyenv)
 - [Neovim](https://neovim.io/)
   - tons of plugins (w/ [vim-plug](https://github.com/junegunn/vim-plug))
   - some key remaps
@@ -44,7 +45,7 @@ For my personal local configurations head to [dotfiles-local](https://github.com
 - [x] Git configuration
 - [x] Support local customizations
 - [x] Use Nvim configuration in Vim
-- [ ] Move pyenv from local to global dotfiles <sup>[[1]](#notes)</sup>
+- [x] Move pyenv from local to global dotfiles <sup>[[1]](#notes)</sup>
 - [ ] SSH configuration
 - [ ] Install system dependencies (packages, shell, etc.)
 - [ ] Improve shell load performances
