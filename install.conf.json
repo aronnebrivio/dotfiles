@@ -29,7 +29,8 @@
       "~/.config/base16-shell": "config/base16-shell",
       "~/.config/bat": "config/bat",
       "~/.omp.json": "omp.json",
-      "~/.tool-versions": "tool-versions"
+      "~/.tool-versions": "tool-versions",
+      "~/.pyenv/version": "pyenv/version"
     }
   },
   {
