@@ -18,6 +18,7 @@ This repository includes configuration files for:
 - [git](https://git-scm.com/)
   - global `.gitignore` and config
   - some fancy aliases
+- [Hyper](https://hyper.is) configuration
 
 Once cloned, run `./install` to automatically set up the development environment.
 *Note that the install script is idempotent: it can safely be run multiple times.*
@@ -46,6 +47,7 @@ For my personal local configurations head to [dotfiles-local](https://github.com
 - [x] Support local customizations
 - [x] Use Nvim configuration in Vim
 - [x] Move pyenv from local to global dotfiles <sup>[[1]](#notes)</sup>
+- [x] Hyper configuration
 - [ ] SSH configuration
 - [ ] Install system dependencies (packages, shell, etc.)
 - [ ] Improve shell load performances
