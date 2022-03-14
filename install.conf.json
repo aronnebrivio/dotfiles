@@ -30,7 +30,8 @@
       "~/.config/bat": "config/bat",
       "~/.omp.json": "omp.json",
       "~/.tool-versions": "tool-versions",
-      "~/.pyenv/version": "pyenv/version"
+      "~/.pyenv/version": "pyenv/version",
+      "~/.hyper.js": "hyper.js"
     }
   },
   {
