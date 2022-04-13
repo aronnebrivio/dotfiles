@@ -27,7 +27,7 @@ Plug 'https://github.com/ddrscott/vim-side-search'
 Plug 'https://github.com/ddrscott/vim-window'
 
 " Code Completion
-Plug 'https://github.com/neoclide/coc.nvim', {'tag': '*', 'branch': 'release', 'do': { -> coc#util#install()}}
+" Plug 'https://github.com/neoclide/coc.nvim', {'tag': '*', 'branch': 'release', 'do': { -> coc#util#install()}}
 " Linting
 Plug 'https://github.com/w0rp/ale'
 
