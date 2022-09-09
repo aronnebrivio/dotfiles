@@ -1,3 +1,4 @@
-nodejs 18.0.0
-golang 1.17.7
+nodejs 18.8.0
+golang 1.19
 php 8.1.3RC1
+terraform 1.2.8
