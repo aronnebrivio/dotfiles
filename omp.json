@@ -16,7 +16,7 @@
             "style": "letter"
           },
           "style": "diamond",
-          "template": "\uf74a {{ .Path }} ",
+          "template": "\uf07b {{ .Path }} ",
           "trailing_diamond": "\ue0b0",
           "type": "path"
         },
@@ -28,7 +28,7 @@
             "fetch_version": true
           },
           "style": "powerline",
-          "template": " \uf898 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
         {
