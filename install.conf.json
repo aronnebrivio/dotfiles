@@ -31,7 +31,7 @@
       "~/.omp.json": "omp.json",
       "~/.tool-versions": "tool-versions",
       "~/.pyenv/version": "pyenv/version",
-      "~/.hyper.js": "hyper.js"
+      "~/.config/Hyper/hyper.json": "config/Hyper/hyper.json"
     }
   },
   {
