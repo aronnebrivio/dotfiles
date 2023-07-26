@@ -44,9 +44,6 @@
       "lightCoral": "#F08080"
     },
     "shell": "",
-    "shellArgs": [
-      "--login"
-    ],
     "env": {},
     "bell": false,
     "bellSound": null,
@@ -69,13 +66,24 @@
         "name": "default",
         "config": {}
       }
-    ]
+    ],
+    "hyperline": {
+      "plugins": [
+        "hostname",
+        "ip",
+        "docker",
+        "git-status",
+        "memory",
+        "cpu",
+        "battery"
+      ]
+    }
   },
   "plugins": [
     "hyper-search",
-    "hyper-tabs-enhanced",
     "hyper-pane",
-    "hyper-highlight-active-pane"
+    "hyper-highlight-active-pane",
+    "hyperline"
   ],
   "localPlugins": [],
   "keymaps": {}

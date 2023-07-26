@@ -31,7 +31,8 @@
       "~/.omp.json": "omp.json",
       "~/.tool-versions": "tool-versions",
       "~/.pyenv/version": "pyenv/version",
-      "~/.config/Hyper/hyper.json": "config/Hyper/hyper.json"
+      "~/.config/Hyper/hyper.json": "config/Hyper/hyper.json",
+      "~/.tmux.conf": "tmux.conf"
     }
   },
   {
