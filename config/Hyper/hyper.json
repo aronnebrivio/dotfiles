@@ -44,6 +44,9 @@
       "lightCoral": "#F08080"
     },
     "shell": "",
+    "shellArgs": [
+      "--login"
+    ],
     "env": {},
     "bell": false,
     "bellSound": null,
@@ -81,6 +84,7 @@
   },
   "plugins": [
     "hyper-search",
+    "hyper-tabs-enhanced",
     "hyper-pane",
     "hyper-highlight-active-pane",
     "hyperline"
