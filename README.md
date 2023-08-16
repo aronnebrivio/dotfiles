@@ -39,6 +39,7 @@ For my personal local configurations head to [dotfiles-local](https://github.com
 ## Result
 ![Shell example](shell.png)
 ![Vim example](vim.png)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Faronnebrivio%2Fdotfiles.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Faronnebrivio%2Fdotfiles?ref=badge_shield)
 
 ## ToDo
 - [x] Fish configuration
@@ -57,3 +58,6 @@ For my personal local configurations head to [dotfiles-local](https://github.com
 
 ## License
 Copyright (c) 2020 Aronne Brivio. Released under the MIT License. See [LICENSE](https://github.com/aronnebrivio/dotfiles/blob/master/LICENSE) for details.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Faronnebrivio%2Fdotfiles.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Faronnebrivio%2Fdotfiles?ref=badge_large)
