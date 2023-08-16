@@ -69,25 +69,13 @@
         "name": "default",
         "config": {}
       }
-    ],
-    "hyperline": {
-      "plugins": [
-        "hostname",
-        "ip",
-        "docker",
-        "git-status",
-        "memory",
-        "cpu",
-        "battery"
-      ]
-    }
+    ]
   },
   "plugins": [
     "hyper-search",
     "hyper-tabs-enhanced",
     "hyper-pane",
-    "hyper-highlight-active-pane",
-    "hyperline"
+    "hyper-highlight-active-pane"
   ],
   "localPlugins": [],
   "keymaps": {}
